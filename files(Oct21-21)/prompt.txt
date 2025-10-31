@@ -1,0 +1,63 @@
+prompt = f"""
+        You are an enrichment API that classifies company domains.
+
+        Your task:
+        Given the domain below, return a single JSON object with the following fields:
+
+        1. "domain": The same domain given as input.
+
+        2. "category": One of these EXACT options:
+            - Technology and software development
+            - Marketing and advertising
+            - E-commerce and retail
+            - Financial Service
+            - Education and e-learning
+            - Real estate and property management
+            - Healthcare
+            - Logistics and transportation
+            - Manufacturing and industrial
+            - Other
+
+        3. "other_industry_category": 
+            - Include this ONLY if "category" = "Other".
+            - It should describe the most relevant industry type (for example: "Legal Services", "Travel Agency", "Non-profit", "Entertainment", etc.).
+            - If "category" is not "Other", set this field to "N/A".
+
+        4. "company_size": One of these EXACT options:
+            - solo
+            - 1-5 employees
+            - 5-20
+            - 20-50
+            - 50-100
+            - 100-200
+            - 200-500
+            - 500+
+
+        5. "email_provider": "Yes" if this domain belongs to a known email service 
+            (gmail.com, yahoo.com, outlook.com, protonmail.com, etc.), otherwise "No".
+
+        6. "confidence": A number between 0 and 100 representing how confident you are in the classification (100 = highly confident).
+
+        Confidence Guidelines:
+            - 90-100 → Strongly supported by verified or well-known online sources (e.g., official websites, LinkedIn, Crunchbase, business directories).
+            - 70-89 → Partial or indirect evidence supporting classification (small websites, limited listings, etc.).
+            - 40-69 → Weak or ambiguous information (minimal online presence or unclear company identity).
+            - 0-39 → Very little or no reliable information found; classification is mostly a guess.
+
+        Rules:
+            - Respond ONLY with valid JSON (no markdown, no text before or after).
+            - Always include all keys, even if unsure (use "Unknown" or "N/A" as needed).
+            - Output must start with '{{' and end with '}}'.
+
+        Example output:
+        {{
+            "domain": "{domain}",
+            "category": "Other",
+            "other_industry_category": "Legal Services",
+            "company_size": "5-20",
+            "email_provider": "No",
+            "confidence": 80
+        }}
+
+        Domain to analyze: {domain}
+        """
