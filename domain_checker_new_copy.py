@@ -28,8 +28,8 @@ configure_genai(current_key)
 print(f"🔑 Using Gemini key: {current_key[:6]}...")
 
 # ------------ Load CSV Data ------------
-file_path = r'C:/SAG/Air-Channel/files(Oct21-21)/converted_users.csv'
-save_path = r'C:/SAG/Air-Channel/files(Oct21-21)/converted_users_enriched.csv'
+file_path = r'C:/SAG/Air-Channel/files(Oct21-21)/not_converted_users.csv'
+save_path = r'C:/SAG/Air-Channel/files(Oct21-21)/not_converted_users_enriched.csv'
 
 df = pd.read_csv(file_path)
 
