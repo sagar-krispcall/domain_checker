@@ -13,6 +13,7 @@ load_dotenv()
 api_keys = [
     os.getenv("GEMINI_API_KEY_1"),
     os.getenv("GEMINI_API_KEY_2"),
+    os.getenv("GEMINI_API_KEY_3")
 ]
 api_keys = [k for k in api_keys if k]
 if not api_keys:
@@ -28,8 +29,8 @@ configure_genai(current_key)
 print(f"🔑 Using Gemini key: {current_key[:6]}...")
 
 # ------------ Load CSV Data ------------
-file_path = r'C:/SAG/Air-Channel/files(Oct21-21)/testing_domain.csv'
-save_path = r'C:/SAG/Air-Channel/files(Oct21-21)/testing_domain_enriched.csv'
+file_path = r'C:/SAG/Air-Channel/files(Oct21-21)/converted_users.csv'
+save_path = r'C:/SAG/Air-Channel/files(Oct21-21)/converted_users_enriched.csv'
 
 df = pd.read_csv(file_path)
 
@@ -111,22 +112,43 @@ try:
 
         # --- Updated Prompt ---
         prompt = f"""
-        You are an enrichment API that classifies company domains. Your goal is to return a single JSON object with accurate classification and information. 
+        You are an autonomous enrichment and classification agent. Your goal is to investigate the company behind the domain provided and return a single JSON object with accurate classifications, size estimates, and website evaluation.
+
+        Follow all instructions carefully.
+
+        Your workflow:
+
+            A. First, visit the website {domain}.
+            - Attempt to load the site and explore all available sections.
+            - Extract all visible text and meaningful content (About, Services, Products, Contact, etc.).
+            - If the website provides sufficient information to confidently determine the company’s category, size, and website evaluation, STOP here and use this data for classification.
+
+            B. If the website provides little or no usable information (e.g., unreachable, parked, minimal, or generic content), THEN search the domain name on external platforms including Google, Bing, and public company directories.
+            - Review the top 10 search results.
+            - Collect and cross-check information about the company, ensuring the results refer to the same organization.
+            - Use this additional information to fill in missing details and improve confidence.
+
+            C. Combine insights from both the website (if available) and external sources (if needed) before making your final decision.
+
+        You must return a single JSON object following the exact structure and rules below.
+
+        ---
 
         Guidelines:
 
         1. "domain": Return the exact domain given as input.
 
         2. "category": Choose ONE of the following EXACT options:
-            - Technology and software development
-            - Marketing and advertising
-            - E-commerce and retail
+            - Technology and Software Development
+            - Professional Services
+            - Marketing and Advertising
+            - E-commerce and Retail
             - Financial Service
             - Education and e-learning
-            - Real estate and property management
+            - Real Estate and Property Management
             - Healthcare
-            - Logistics and transportation
-            - Manufacturing and industrial
+            - Logistics and Transportation
+            - Manufacturing and Industrial
             - Other
 
         3. "other_industry_category":
@@ -134,76 +156,54 @@ try:
             - Describe the most relevant industry type (e.g., "Legal Services", "Travel Agency", "Non-profit", "Entertainment").
             - If "category" is not "Other", set this to "N/A".
 
-        4. "company_size": Choose ONE of these EXACT options:
+        4. "company_size": Estimate the number of employees only if reliable clues are available.
+        Choose ONE of these options:
             - solo
-            - 1 to 5 employees
+            - 1 to 5
             - 5 to 20
             - 20 to 50
             - 50 to 100
             - 100 to 200
             - 200 to 500
             - 500+
-            Guidelines:
-                - Use LinkedIn, Crunchbase, official directories, or company reports to estimate size.
-                - If exact number is unknown, provide the closest estimation.
+        Estimation rules:
+            - Use explicit info from the website, social media, or verified external profiles (e.g., “team of 8”, “over 200 employees”).
+            - If no such data exists, set this to "Unknown".
+            - Do NOT guess based only on design quality or website scale.
 
-        5. "email_provider": Identify if the domain is primarily used as an email service (free, business, disposable).
+        5. "email_provider": Identify if the domain is primarily used as an email service.
             - Output "Yes" if it is an email provider.
             - Output "No" if it is a regular business or organization.
-            - Examples:
+            Examples:
                 - gmail.com → Yes
                 - yahoo.com → Yes
                 - company.com → No
-            - If unsure, make your best guess based on domain reputation and online sources.
 
         6. "website": Evaluate the domain's website for usable business information.
             Output ONE of the following:
+                - unreachable → Site does not load at all.
+                - no_info → Site loads but has no meaningful business content.
+                - little_info → Some content but insufficient to clearly understand the business.
+                - much_info → Detailed site with clear business information.
 
-            - unreachable → Site does not load at all (HTTP errors, DNS errors, SSL issues, or redirects to unrelated sites).
-            - no_info → Site loads but has no meaningful business content (e.g., “coming soon,” placeholder, or blank page).
-            - little_info → Site has some business content, but insufficient to understand offerings fully.
-                Examples: Only a homepage with vague text, only contact info, or minimal services description.
-            - much_info → Full website with detailed sections: services/products, About Us, team, case studies, testimonials, contact info.
-                - Website should clearly describe the business operations.
-
-            Evaluation tips:
-                - Check homepage + main pages (About, Services, Contact).
-                - Consider clarity, depth, and relevance of information.
-                - Include business info even if partially visible or scattered.
-
-        7. "confidence": Provide a number between 0 and 100 representing confidence in your classification.
-
-            Guidelines for scoring:
-
-            - 90-100 → Very confident:
-                - Verified info from official website, LinkedIn, Crunchbase, business directories, news articles.
-                - Website fully functional with detailed info.
-            - 70-89 → Moderate confidence:
-                - Partial evidence from smaller websites, social media, or limited listings.
-                - Website functional but missing some info.
-            - 40-69 → Low confidence:
-                - Weak or ambiguous online presence.
-                - Minimal website or inconsistent info across sources.
-            - 0-39 → Very low confidence:
-                - No reliable sources.
-                - Site down, parked, or major ambiguity.
-                - Mostly guesswork.
-
-            Additional rules:
-                - Reduce confidence if website is minimal or inaccessible, even if other sources exist.
-                - Increase confidence if multiple sources confirm the business type, size, and website info.
+        7. "confidence": Provide a number between 0 and 100 representing confidence in the final classification.
+            Guidelines:
+                - 90-100 → Very confident (clear and consistent info from site and/or sources).
+                - 70-89 → Moderate confidence (some data but partial).
+                - 40-69 → Low confidence (limited presence or unclear info).
+                - 0-39 → Very low confidence (no reliable info).
 
         Additional Rules:
-        - Respond ONLY with valid JSON (no markdown, no explanations).
-        - Always include all keys, even if unsure (use "Unknown" or "N/A" if needed).
-        - If the domain is parked, redirected, or inaccessible, reflect this in "website" and adjust "confidence" accordingly.
-        - Cross-validate information from multiple sources whenever possible.
+        - Respond ONLY with valid JSON. No markdown or explanations.
+        - Always include all keys even if uncertain ("Unknown" or "N/A" when needed).
+        - If the domain is parked or unreachable, reflect that in "website" and lower confidence.
+        - Prefer direct website data. Use external sources only when website data is missing or insufficient.
         - Output must start with '{{' and end with '}}'.
 
         Example output:
         {{
             "domain": "{domain}",
-            "category": "Technology and software development",
+            "category": "Technology and Software Development",
             "other_industry_category": "N/A",
             "company_size": "20 to 50",
             "email_provider": "No",
