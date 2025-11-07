@@ -210,9 +210,10 @@ try:
 
         4. "company_size": solo, 1 to 5, 5 to 20, 20 to 50, 50 to 100, 100 to 200, 200 to 500, 500+, Unknown.
             Estimation rules:
-            - Use explicit info from the website, social media, or verified external profiles (e.g., “team of 8”, “over 200 employees”).
-            - If no such data exists, set this to "Unknown".
+            - Use explicit info from the website, company documents, social media, or verified external profiles.
             - Do NOT guess based only on design quality or website scale.
+            - If exact number is unknown, provide the closest estimation.
+            - If no such data exists, set this to "Unknown".
 
         5. "email_provider": Identify if the domain is primarily used as an email service.
             - Output "Yes" if it is an email provider.
