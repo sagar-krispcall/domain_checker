@@ -1,7 +1,0 @@
-domain,category,company_size,email_provider,confidence,other_industry_category,website,website_status
-passmail.net,Technology and Software Development,500+,Yes,95,N/A,much_info,reachable
-stayhome.li,Technology and Software Development,Unknown,Yes,90,N/A,no_info,reachable
-localhost.international,Technology and Software Development,solo,No,90,N/A,little_info,reachable
-julakanti.com,Technology and Software Development,20 to 50,No,80,N/A,no_info,reachable
-malobicky.com,Technology and Software Development,solo,No,85,N/A,unreachable,unreachable
-onebusiness.com,Other,Unknown,No,35,Unidentified business,no_info,reachable
