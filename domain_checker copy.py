@@ -10,7 +10,9 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
-# ------------ Load API Keys ------------
+# =====================================================
+# 🔑 Load API Keys
+# =====================================================
 load_dotenv()
 api_keys = [
     os.getenv("GEMINI_API_KEY_1"),
@@ -32,41 +34,43 @@ current_key = next(key_cycle)
 configure_genai(current_key)
 print(f"🔑 Using Gemini key: {current_key[:6]}...")
 
-# ------------ Load CSV Data ------------
+# =====================================================
+# 📂 Load CSV Data
+# =====================================================
 file_path = r'files/testing_domain.csv'
 save_path = r'files/testing_domain_enriched.csv'
 
 df = pd.read_csv(file_path)
 
 # Ensure required columns exist
-for col in ['category','company_size','email_provider','confidence','other_industry_category','website','website_status','website_reason']:
-    if col not in df.columns:
-        df[col] = ""
-
-# Ensure required columns exist and have correct dtype
-text_columns = [
-    'category', 'company_size', 'email_provider', 
-    'other_industry_category', 'website', 
-    'website_status', 'website_reason'
+required_cols = [
+    'category','company_size','email_provider','confidence',
+    'other_industry_category','website','website_status','website_reason'
 ]
-numeric_columns = ['confidence']
-
-for col in text_columns:
+for col in required_cols:
     if col not in df.columns:
         df[col] = ""
-    df[col] = df[col].astype(str)
 
-for col in numeric_columns:
-    if col not in df.columns:
-        df[col] = 0
+# Type safety
+text_cols = [
+    'category','company_size','email_provider',
+    'other_industry_category','website','website_status','website_reason'
+]
+num_cols = ['confidence']
+
+for col in text_cols:
+    df[col] = df[col].astype(str)
+for col in num_cols:
     df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
 
-print(df.dtypes)
+print("✅ Data types verified.\n", df.dtypes)
 
 
-# ------------ Website Checking Functions ------------
+# =====================================================
+# 🌍 Website Checking Functions
+# =====================================================
 def clean_html(html):
-    """Remove HTML tags and scripts for plain readable text."""
+    """Strip HTML tags/scripts and return plain text."""
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript"]):
         tag.decompose()
@@ -74,26 +78,20 @@ def clean_html(html):
     return re.sub(r"\s+", " ", text)
 
 def check_website(domain):
-    """
-    Check website reachability and return:
-    - status: 'reachable' or 'unreachable'
-    - reason: HTTP status code or error reason
-    - text snippet (cleaned, max 4000 chars)
-    """
+    """Try multiple URL patterns and return reachability + cleaned snippet."""
     urls_to_try = [
         f"https://{domain}",
         f"http://{domain}",
         f"https://www.{domain}",
         f"http://www.{domain}"
     ]
-
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"}
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 
     for url in urls_to_try:
         try:
             r = requests.get(url, timeout=10, headers=headers)
             if r.status_code < 400 and "text/html" in r.headers.get("Content-Type", ""):
-                return "reachable", str(r.status_code), clean_html(r.text)[:4000]
+                return "reachable", str(r.status_code), clean_html(r.text)[:3000]
             else:
                 return "unreachable", str(r.status_code), ""
         except requests.exceptions.Timeout:
@@ -108,7 +106,10 @@ def check_website(domain):
 
     return "unreachable", reason, ""
 
-# ------------ Gemini API Call Function ------------
+
+# =====================================================
+# 🤖 Gemini API Call
+# =====================================================
 def call_gemini(prompt, retries=3):
     global current_key
     for attempt in range(retries):
@@ -122,10 +123,7 @@ def call_gemini(prompt, retries=3):
 
             if text.startswith("```"):
                 parts = text.split("```")
-                if len(parts) >= 2:
-                    text = parts[1].strip()
-                else:
-                    text = text.replace("```json", "").replace("```", "").strip()
+                text = parts[1] if len(parts) >= 2 else text.replace("```json", "").replace("```", "").strip()
 
             match = re.search(r'\{.*\}', text, re.DOTALL)
             if match:
@@ -153,14 +151,17 @@ def call_gemini(prompt, retries=3):
                 raise RuntimeError(f"Gemini API error: {err}")
     raise RuntimeError("❌ All retries failed for Gemini API call.")
 
-# ------------ Main Processing Loop ------------
+
+# =====================================================
+# 🚀 Main Processing Loop
+# =====================================================
 start_time = datetime.now()
 processed = 0
+SAVE_EVERY = 10  # Save progress every N rows
 
 try:
     for idx, row in df.iterrows():
         category_value = str(row.get('category', '')).strip()
-        # Skip rows that already have a meaningful category
         if category_value not in ["", "Unknown", "nan", "NaN"]:
             continue
 
@@ -170,11 +171,11 @@ try:
 
         print(f"\n🌐 Processing: {domain}")
 
-        # --- Check website ---
+        # --- Website check ---
         site_status, site_reason, site_text = check_website(domain)
         print(f"🌍 Website status for {domain}: {site_status}, Reason: {site_reason}")
 
-        # --- Updated Prompt with Real Site Info ---
+        # --- Gemini prompt ---
         prompt = f"""
         You are an autonomous enrichment and classification agent. Your goal is to investigate the company behind the domain provided and return a single JSON object with accurate classifications, size estimates, confidence finding, and website evaluation.
 
@@ -210,9 +211,10 @@ try:
 
         4. "company_size": solo, 1 to 5, 5 to 20, 20 to 50, 50 to 100, 100 to 200, 200 to 500, and 500+.
             Estimation rules:
-            - Use explicit info from the website, company documents, social media, or verified external profiles.
-            - Do NOT guess based only on design quality or website scale.
-            - If exact number is unknown, provide the closest estimation.
+            - Estimate company size using clues such as team description, About page, customer base, LinkedIn presence, or general business type.
+            - If explicit numbers are missing, infer the **most likely range** based on wording (e.g., "our team", "global offices", "startup", "enterprise").
+            - Never output "Unknown" — always choose the **closest possible range** from: solo, 1 to 5, 5 to 20, 20 to 50, 50 to 100, 100 to 200, 200 to 500, 500+.
+            - Use "solo" if it appears to be an individual or freelancer website.
 
         5. "email_provider": Identify if the domain is primarily used as an email service.
             - Output "Yes" if it is an email provider.
@@ -238,6 +240,8 @@ try:
 
         Additional Rules:
         - Output valid JSON only, no markdown or explanations.
+          Always provide a valid value for every field — never use "Unknown" for company_size.
+        - If company size is not explicitly mentioned, make a **best approximate guess** from available text or context.
         - Always include all keys, use "Unknown" or "N/A" when necessary.
         - Use {site_status} when deciding "website".
         - Prefer website data; use external sources only if necessary.
@@ -257,20 +261,14 @@ try:
         Domain to analyze: {domain}
         """
 
-        # --- Call Gemini ---
         try:
             req_start = time.time()
             res = call_gemini(prompt)
-            try:
-                js = json.loads(res)
-            except Exception:
-                print(f"⚠ Invalid JSON from Gemini for {domain}. Storing Unknowns.")
-                js = {}
-
+            js = json.loads(res)
             req_time = round(time.time() - req_start, 2)
-            print(f"📝 Gemini output for {domain}:")
+
+            print(f"📝 Gemini output for {domain} ({req_time}s):")
             print(json.dumps(js, indent=2))
-            print(f"⏱ Response time: {req_time} seconds")
 
             # --- Assign outputs ---
             df.at[idx, 'category'] = js.get('category', 'Unknown')
@@ -282,10 +280,20 @@ try:
             df.at[idx, 'website_status'] = site_status
             df.at[idx, 'website_reason'] = site_reason
 
+            # --- Fallback for company_size ---
+            if df.at[idx, 'company_size'] in ["Unknown", "", "N/A", "nan"]:
+                text = site_text.lower()
+                if any(w in text for w in ["freelancer", "consultant", "independent"]):
+                    df.at[idx, 'company_size'] = "solo"
+                elif any(w in text for w in ["startup", "small team", "boutique", "agency"]):
+                    df.at[idx, 'company_size'] = "1 to 5"
+                else:
+                    df.at[idx, 'company_size'] = "5 to 20"
+
         except Exception as e:
             print(f"⚠ Error at {domain}: {e}")
             df.at[idx, 'category'] = "Unknown"
-            df.at[idx, 'company_size'] = "Unknown"
+            df.at[idx, 'company_size'] = "1 to 5"  # sensible fallback
             df.at[idx, 'email_provider'] = "Unknown"
             df.at[idx, 'confidence'] = 0
             df.at[idx, 'other_industry_category'] = "N/A"
@@ -293,18 +301,25 @@ try:
             df.at[idx, 'website_status'] = site_status
             df.at[idx, 'website_reason'] = site_reason
 
-        df.to_csv(save_path, index=False)
         processed += 1
-        print(f"💾 Saved progress. Rows completed: {processed}")
-        time.sleep(5)
+
+        # --- Periodic Save ---
+        if processed % SAVE_EVERY == 0:
+            df.to_csv(save_path, index=False)
+            print(f"💾 Progress saved ({processed}/{len(df)} rows).")
+
+        print(f"Progress: {processed}/{len(df)} ({processed/len(df)*100:.1f}%)")
+        time.sleep(2)
 
 except KeyboardInterrupt:
     print("\n🛑 Interrupted. Saving progress...")
     df.to_csv(save_path, index=False)
 
+# Final save
 end_time = datetime.now()
-elapsed = end_time - start_time
 df.to_csv(save_path, index=False)
+elapsed = end_time - start_time
+
 print("\n✅ Enrichment complete!")
-print(f"⏱ Start: {start_time}, End: {end_time}, Total: {elapsed}")
-print(f"📁 Saved to: {save_path}")
+print(f"⏱ Duration: {elapsed}")
+print(f"📁 Output saved to: {save_path}")

@@ -33,8 +33,8 @@ configure_genai(current_key)
 print(f"🔑 Using Gemini key: {current_key[:6]}...")
 
 # ------------ Load CSV Data ------------
-file_path = r'C:/SAG/User_Domain_Analysis/Enterprise_Client/enterprise_domain(active_pay_900).csv'
-save_path = r'C:/SAG/User_Domain_Analysis/Enterprise_Client/enterprise_domain(active_pay_900)_enriched.csv'
+file_path = r'files/testing_domain.csv'
+save_path = r'files/testing_enriched.csv'
 
 df = pd.read_csv(file_path)
 
@@ -113,7 +113,7 @@ def call_gemini(prompt, retries=3):
     global current_key
     for attempt in range(retries):
         try:
-            model = genai.GenerativeModel("gemini-2.5-flash")
+            model = genai.GenerativeModel("gemini-2.5-flash-lite")
             response = model.generate_content(prompt)
             text = (response.text or "").strip()
 
@@ -210,9 +210,10 @@ try:
 
         4. "company_size": solo, 1 to 5, 5 to 20, 20 to 50, 50 to 100, 100 to 200, 200 to 500, and 500+.
             Estimation rules:
-            - Use explicit info from the website, company documents, social media, or verified external profiles.
-            - Do NOT guess based only on design quality or website scale.
-            - If exact number is unknown, provide the closest estimation.
+            - Estimate company size using clues such as team description, About page, customer base, LinkedIn presence, or general business type.
+            - If explicit numbers are missing, infer the **most likely range** based on wording (e.g., "our team", "global offices", "startup", "enterprise").
+            - Never output "Unknown" — always choose the **closest possible range** from: solo, 1 to 5, 5 to 20, 20 to 50, 50 to 100, 100 to 200, 200 to 500, 500+.
+            - Use "solo" if it appears to be an individual or freelancer website.
 
         5. "email_provider": Identify if the domain is primarily used as an email service.
             - Output "Yes" if it is an email provider.
@@ -238,6 +239,8 @@ try:
 
         Additional Rules:
         - Output valid JSON only, no markdown or explanations.
+          Always provide a valid value for every field — never use "Unknown" for company_size.
+        - If company size is not explicitly mentioned, make a **best approximate guess** from available text or context.
         - Always include all keys, use "Unknown" or "N/A" when necessary.
         - Use {site_status} when deciding "website".
         - Prefer website data; use external sources only if necessary.
