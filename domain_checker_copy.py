@@ -17,12 +17,15 @@ load_dotenv()
 api_keys = [
     os.getenv("GEMINI_API_KEY_1"),
     os.getenv("GEMINI_API_KEY_2"),
-    os.getenv("GEMINI_API_KEY_3"),
-    os.getenv("GEMINI_API_KEY_4"),
-    os.getenv("GEMINI_API_KEY_5"),
-    os.getenv("GEMINI_API_KEY_6"),
-    os.getenv("GEMINI_API_KEY_7")
+    os.getenv("GEMINI_API_KEY_3")
+    #os.getenv("GEMINI_API_KEY_4"),
+    #os.getenv("GEMINI_API_KEY_5"),
+    #os.getenv("GEMINI_API_KEY_6"),
+    #os.getenv("GEMINI_API_KEY_7"),
+    #os.getenv("GEMINI_API_KEY_8"),
+    #os.getenv("GEMINI_API_KEY_9")
 ]
+
 api_keys = [k for k in api_keys if k]
 if not api_keys:
     raise ValueError("❌ No valid Gemini API keys found in .env")
@@ -39,8 +42,8 @@ print(f"🔑 Using Gemini key: {current_key[:6]}...")
 # =====================================================
 # 📂 Load CSV Data
 # =====================================================
-file_path = r'files/testing_domain.csv'
-save_path = r'files/testing_domain_enriched.csv'
+file_path = r'files/converted_users.csv'
+save_path = r'files/converted_users_enriched.csv'
 
 df = pd.read_csv(file_path)
 
