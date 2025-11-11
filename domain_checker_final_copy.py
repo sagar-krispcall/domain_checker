@@ -39,8 +39,8 @@ configure_genai(current_key)
 print(f"🔑 Using Gemini key: {current_key[:6]}...")
 
 # ------------ Load CSV Data ------------
-file_path = r'C:/SAG/User_Domain_Analysis/Enterprise_Client/enterprise_domain(active_pay_400_550).csv'
-save_path = r'C:/SAG/User_Domain_Analysis/Enterprise_Client/enterprise_domain(active_pay_400_550)_enriched.csv'
+file_path = r'C:/SAG/User_Domain_Analysis/Enterprise_Client/enterprise_domain(closed_pay_380).csv'
+save_path = r'C:/SAG/User_Domain_Analysis/Enterprise_Client/enterprise_domain(closed_pay_380)_enriched.csv'
 
 df = pd.read_csv(file_path)
 
