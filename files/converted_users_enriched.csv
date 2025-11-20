@@ -1,0 +1,344 @@
+country,domain,category,company_size,email_provider,confidence,other_industry_category,website,website_status,website_reason
+United States,freesourcecodes.com,Technology and Software Development,solo,No,60,N/A,little_info,reachable,200
+India,wsu.university,Education and e-learning,20 to 50,No,95,N/A,much_info,reachable,200
+United Kingdom,joinkula.io,Technology and Software Development,1 to 5,No,60,N/A,unreachable,unreachable,403
+United States,leadsolympia.com,Marketing and Advertising,solo,No,95,N/A,much_info,reachable,200
+United States,chcnetwork.org,Healthcare,200 to 500,No,95,N/A,much_info,reachable,200
+India,techgropse.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+United States,teknobit.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+India,futurebytesolutionsinc.com,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+South Africa,vernonfroneman.com,Professional Services,solo,No,95,N/A,much_info,reachable,200
+United States,lynchgroup.co,Logistics and Transportation,50 to 100,No,95,N/A,much_info,reachable,200
+United States,seedify.fund,Financial Service,50 to 100,No,95,N/A,much_info,reachable,200
+United States,ygrene.vip,Financial Service,1 to 5,No,60,N/A,little_info,reachable,200
+United States,niyousllc.com,Professional Services,1 to 5,No,70,N/A,unreachable,unreachable,403
+Australia,australandagri.com.au,E-commerce and Retail,1 to 5,No,95,Agriculture Supplies,much_info,reachable,200
+Canada,passmail.net,Technology and Software Development,500+,No,100,N/A,much_info,reachable,200
+United States,solvpath.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+Armenia,allpara.com,Professional Services,1 to 5,No,50,N/A,unreachable,unreachable,402
+India,somakanti.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+Spain,hslu.ch,Education and e-learning,500+,No,95,N/A,much_info,reachable,200
+United States,oxmtalent.com,Professional Services,5 to 20,No,70,Recruitment / Staffing,unreachable,unreachable,404
+Philippines,outsourceaccelerator.com,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+India,numberscraft.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+Viet Nam,demetergroup.io,Professional Services,50 to 100,No,75,N/A,unreachable,unreachable,Connection Error
+United States,pm.me,Technology and Software Development,500+,Yes,95,N/A,much_info,reachable,200
+United States,malobicky.com,Other,solo,No,10,N/A,unreachable,unreachable,Exceeded 30 redirects.
+Portugal,serenity21.com,Professional Services,1 to 5,No,65,N/A,little_info,reachable,200
+New Zealand,olympiathelabel.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+United States,adpatients.co,Marketing and Advertising,1 to 5,No,75,N/A,little_info,reachable,200
+Belgium,milakampen.be,Education and e-learning,1 to 5,No,95,N/A,much_info,reachable,200
+India,gsconsulting.in,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+India,times.my,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+United States,thecohsalon.com,Professional Services,1 to 5,No,95,N/A,much_info,reachable,200
+India,suvitt.com,Technology and Software Development,50 to 100,No,40,N/A,unreachable,unreachable,Connection Error
+United States,myequitysolar.com,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+South Africa,glowifyleads.com,Marketing and Advertising,1 to 5,No,60,N/A,little_info,reachable,200
+Jordan,qtechnetworks.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+Germany,executive-engineers.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+United States,alfadhel.net,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+India,mynachiketa.com,Education and e-learning,1 to 5,No,95,N/A,much_info,reachable,200
+India,rpoarena.com,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+France,entrusted.company,Professional Services,1 to 5,No,95,N/A,unreachable,unreachable,Connection Error
+India,rfpease.org,Professional Services,solo,No,60,N/A,little_info,reachable,200
+India,metrichub.ai,Technology and Software Development,5 to 20,No,75,N/A,unreachable,unreachable,Connection Error
+Brazil,tutamail.com,Technology and Software Development,50 to 100,Yes,95,N/A,much_info,reachable,200
+India,arrowsolarsolutions.au,Other,1 to 5,No,75,Renewable Energy Services,little_info,reachable,200
+India,satsportnews.com,Other,1 to 5,No,60,Sports News and Media,little_info,reachable,200
+United Kingdom,boatsy.com,E-commerce and Retail,50 to 100,No,95,Boat Rentals/Travel,much_info,reachable,200
+United States,haelanenergy.com,Technology and Software Development,1 to 5,No,20,N/A,unreachable,unreachable,Connection Error
+United Kingdom,localhost.international,Technology and Software Development,solo,No,50,N/A,little_info,reachable,200
+India,capitalkonect.co.uk,Financial Service,1 to 5,No,95,N/A,much_info,reachable,200
+Australia,unitedwecan.com.au,Healthcare,1 to 5,No,95,N/A,much_info,reachable,200
+United States,umich.edu,Education and e-learning,500+,No,100,N/A,much_info,unreachable,403
+Australia,firebrickpharma.com,Healthcare,5 to 20,No,95,N/A,much_info,reachable,200
+United States,hi2.in,Technology and Software Development,solo,Yes,95,N/A,much_info,reachable,200
+United States,onebusiness.com,Professional Services,1 to 5,No,50,N/A,little_info,reachable,200
+United States,managementc.net,Financial Service,1 to 5,No,95,N/A,much_info,reachable,200
+United States,galapagostrading.com,Logistics and Transportation,20 to 50,No,95,N/A,much_info,reachable,200
+India,qbim.co.in,Technology and Software Development,solo,No,50,N/A,little_info,reachable,200
+India,softment.in,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+Ukraine,alekseyboyko.com,Technology and Software Development,solo,No,45,N/A,unreachable,unreachable,Connection Error
+United States,gauermodules.com,Logistics and Transportation,5 to 20,No,95,N/A,much_info,reachable,200
+India,kommuniquelearning.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+United States,cornell.edu,Education and e-learning,500+,No,100,N/A,much_info,reachable,200
+United States,selcedu.com,Education and e-learning,20 to 50,No,95,N/A,much_info,reachable,200
+India,infinitysoftsystems.com,Technology and Software Development,200 to 500,No,95,N/A,much_info,reachable,200
+United States,snapi.com,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+India,bluehiresolutions.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+India,inlogic.in,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+Ukraine,withtwine.com,Technology and Software Development,50 to 100,No,50,N/A,unreachable,unreachable,Connection Error
+India,corpswing.co.uk,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+India,salesforce.com,Technology and Software Development,500+,No,100,N/A,much_info,reachable,200
+India,vaultmotion.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+India,triomedia.io,Marketing and Advertising,20 to 50,No,95,N/A,much_info,reachable,200
+South Africa,droneworld.co.za,E-commerce and Retail,5 to 20,No,60,N/A,unreachable,unreachable,SSL Error
+India,bluenetmarketing.com,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+United Arab Emirates,dreamholidays.llc,Logistics and Transportation,1 to 5,No,95,Travel Agency,much_info,reachable,200
+Philippines,ventra.com.sg,Technology and Software Development,20 to 50,No,60,N/A,unreachable,unreachable,403
+Moldova,energnature.com,Other,1 to 5,No,75,Energy,unreachable,unreachable,404
+India,trevalocreatives.site,Marketing and Advertising,solo,No,10,N/A,unreachable,unreachable,409
+India,boostchannel.in,Technology and Software Development,solo,No,50,N/A,no_info,reachable,200
+Australia,dimepiecedynasty.com,Marketing and Advertising,1 to 5,No,95,N/A,much_info,reachable,200
+United States,bahamagolfuniversity.com,Education and e-learning,1 to 5,No,50,N/A,unreachable,unreachable,Connection Error
+United States,lochharbour.org,Other,5 to 20,No,75,Non-profit,unreachable,unreachable,Connection Error
+United States,webliteseo.com,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+India,techsysweb.com,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+India,fluid.ai,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+India,ondemandint.com,Professional Services,100 to 200,No,95,N/A,much_info,reachable,200
+India,xebo.ai,Technology and Software Development,200 to 500,No,95,N/A,much_info,reachable,200
+United States,orbis-it.com,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+Indonesia,lifewood.com,Technology and Software Development,200 to 500,No,95,N/A,much_info,reachable,200
+India,getaltos.com,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+India,b2bwizards.io,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+India,cxm.com,Financial Service,200 to 500,No,95,N/A,much_info,reachable,200
+France,pluslogisticsltd.com,Logistics and Transportation,5 to 20,No,50,N/A,unreachable,unreachable,Connection Error
+Germany,sciengines.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+Netherlands,beaconhousetechnology.com,Technology and Software Development,100 to 200,No,95,N/A,much_info,reachable,200
+India,growmaxai.com,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+Hungary,smartago.net,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+Australia,alchemybreathwork.com.au,Other,solo,No,95,Wellness and Health Coaching,unreachable,unreachable,Connection Error
+India,webnetictrendz.com,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+India,localtravelsguide.com,Other,1 to 5,No,60,Travel Agency,unreachable,unreachable,409
+United States,rockyexteriors.com,Professional Services,1 to 5,No,95,Home Improvement and Renovation,much_info,reachable,200
+Australia,quantumcontractsolutions.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+India,designbrains.com,Professional Services,5 to 20,No,95,Graphic Design and Digitizing Services,much_info,reachable,200
+India,proteomics.com.au,Healthcare,50 to 100,No,95,N/A,much_info,reachable,200
+United States,group14.technology,Manufacturing and Industrial,200 to 500,No,95,N/A,much_info,reachable,200
+United States,gouparty.com,Other,1 to 5,No,95,Event Services,much_info,reachable,200
+India,fortunechimmizone.com,Professional Services,5 to 20,No,95,Immigration Services,much_info,reachable,200
+India,avishkaram.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+United States,solnrus.com,Professional Services,20 to 50,No,95,Hospitality Staffing,much_info,reachable,200
+India,innovantsolution.com,Professional Services,1 to 5,No,75,N/A,little_info,reachable,200
+United Kingdom,green-lawner.com,Other,1 to 5,No,50,Landscaping and Lawn Care,unreachable,unreachable,Connection Error
+India,hashdt.com,Financial Service,50 to 100,No,95,N/A,much_info,reachable,200
+India,orderonline.in.net,E-commerce and Retail,1 to 5,No,60,N/A,unreachable,unreachable,403
+India,tetr.org,Education and e-learning,20 to 50,No,95,N/A,much_info,reachable,200
+United Arab Emirates,almondtcss.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+United Kingdom,merlinhomes.co,Real Estate and Property Management,1 to 5,No,70,N/A,little_info,reachable,200
+Cambodia,oviovi.io,Technology and Software Development,solo,No,95,N/A,no_info,reachable,200
+Mexico,christianharvey.london,Professional Services,solo,No,80,N/A,unreachable,unreachable,404
+South Africa,capeneto.com,Other,solo,No,10,N/A,unreachable,unreachable,404
+United States,rsrkitchen.com,E-commerce and Retail,1 to 5,No,40,N/A,unreachable,unreachable,500
+United States,albertosardinas.com,Professional Services,solo,No,95,N/A,much_info,reachable,200
+Thailand,themccorp.com,Financial Service,20 to 50,No,95,N/A,much_info,reachable,200
+United States,northpointhospitality.com,Real Estate and Property Management,50 to 100,No,95,N/A,much_info,reachable,200
+India,sheelafoam.com,Manufacturing and Industrial,500+,No,95,N/A,much_info,reachable,200
+India,digitruckdispatchers.com,Logistics and Transportation,5 to 20,No,95,N/A,much_info,reachable,200
+Philippines,kw.com,Real Estate and Property Management,500+,No,95,N/A,much_info,unreachable,403
+United States,goflow.co.site,Technology and Software Development,1 to 5,No,50,N/A,unreachable,unreachable,404
+United States,86cannon.com,Real Estate and Property Management,5 to 20,No,95,Hospitality,much_info,reachable,200
+United States,topnames.org,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+United States,oceansxyz.com,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+United Kingdom,t4.education,Education and e-learning,200 to 500,No,95,N/A,much_info,reachable,200
+United States,alselli.co.id,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+United States,highticketclosers.us,Professional Services,1 to 5,No,60,N/A,little_info,reachable,200
+Canada,wiserteck.com,Financial Service,5 to 20,No,95,N/A,much_info,reachable,200
+United Arab Emirates,luxinvest.io,Financial Service,1 to 5,No,60,N/A,little_info,reachable,200
+United States,newwavefansmanagement.com,Professional Services,solo,No,60,N/A,little_info,reachable,200
+Pakistan,wahyd.com,Logistics and Transportation,100 to 200,No,95,N/A,much_info,reachable,200
+United States,jktech-collabs.com,Other,1 to 5,No,50,Web Hosting Directory,no_info,reachable,200
+Colombia,ideasx.com,Technology and Software Development,solo,No,60,N/A,little_info,reachable,200
+India,radiatechs.com,Technology and Software Development,200 to 500,No,95,N/A,much_info,reachable,200
+India,ark2construct.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+India,speedobuy.com,E-commerce and Retail,1 to 5,No,50,N/A,unreachable,unreachable,Connection Error
+United States,stayhome.li,Technology and Software Development,solo,Yes,75,N/A,little_info,reachable,200
+India,houseofassignments.com,Education and e-learning,5 to 20,No,95,N/A,much_info,reachable,200
+India,tourbureau.us,Logistics and Transportation,1 to 5,No,95,Travel Agency,much_info,reachable,200
+India,innovativehiringsolutions.com,Professional Services,1 to 5,No,95,N/A,much_info,reachable,200
+United States,owleyes.ch,Other,solo,Yes,95,Email Service Provider,no_info,reachable,200
+Philippines,axguard.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+Philippines,tycoms.com,Technology and Software Development,1 to 5,No,60,N/A,no_info,reachable,200
+United States,intergroupmining.com,Manufacturing and Industrial,50 to 100,No,95,N/A,much_info,reachable,200
+India,geniusbuddyy.com,Education and e-learning,5 to 20,No,95,N/A,much_info,reachable,200
+Malaysia,jyglobalbiz.com,Professional Services,1 to 5,No,95,N/A,much_info,reachable,200
+Kosovo,bliniofficial.com,E-commerce and Retail,5 to 20,No,95,N/A,much_info,reachable,200
+India,synovaconsultants.com,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+Kazakhstan,rybnikov.co,Professional Services,solo,No,50,N/A,unreachable,unreachable,SSL Error
+India,mokobara.com,E-commerce and Retail,20 to 50,No,95,N/A,much_info,reachable,200
+United States,equitylegalservices.org,Professional Services,5 to 20,No,95,Legal Services / Non-profit,much_info,reachable,200
+United States,skyworksllc.com,Manufacturing and Industrial,50 to 100,No,95,N/A,much_info,reachable,200
+India,techxerro.com,Technology and Software Development,1 to 5,No,60,N/A,little_info,reachable,200
+Philippines,blacktuskadvisors.com,Professional Services,1 to 5,No,95,N/A,much_info,reachable,200
+Latvia,teamdash.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+India,basalanalytics.com,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+United States,pathwayzbd.com,Technology and Software Development,5 to 20,No,45,N/A,unreachable,unreachable,Connection Error
+India,avantaxdesign.com,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+Australia,advantagefeeders.com.au,Manufacturing and Industrial,1 to 5,No,95,N/A,much_info,reachable,200
+Portugal,jdadigital.com,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+India,iacs.in,Manufacturing and Industrial,200 to 500,No,95,N/A,much_info,reachable,200
+Algeria,souheibmadi.com,Professional Services,solo,No,75,N/A,little_info,reachable,200
+India,borisgroupofconstruction.com.au,Professional Services,5 to 20,No,95,Construction and Renovation,much_info,reachable,200
+India,mindcypress.com,Education and e-learning,50 to 100,No,95,N/A,much_info,reachable,200
+India,doshiengineering.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+Thailand,kohtour.com,Other,1 to 5,No,95,Travel Agency,much_info,reachable,200
+India,revolnixx.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+India,giakaacapital.com,Financial Service,5 to 20,No,95,N/A,much_info,reachable,200
+India,andaazfashion.com,E-commerce and Retail,50 to 100,No,95,N/A,much_info,unreachable,403
+India,thesuperaccountants.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+India,finoways.com,Financial Service,5 to 20,No,95,N/A,much_info,reachable,200
+United States,dreamkeyrentals.com,Real Estate and Property Management,5 to 20,No,95,N/A,much_info,reachable,200
+United Kingdom,catapultonline.com,Marketing and Advertising,50 to 100,No,95,N/A,much_info,reachable,200
+India,hekautech.com,Technology and Software Development,5 to 20,No,65,N/A,little_info,reachable,200
+Germany,farol-hansestil.de,Other,5 to 20,No,70,Domain Registration Services,no_info,reachable,200
+India,lowcodeminds.com,Technology and Software Development,1 to 5,No,75,N/A,little_info,reachable,200
+India,prepzee.com,Education and e-learning,50 to 100,No,95,N/A,much_info,reachable,200
+South Africa,k2020.digital,Technology and Software Development,1 to 5,No,50,N/A,unreachable,unreachable,Connection Error
+6.289396739,cbasites.com,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+India,smartenspaces.com,Technology and Software Development,20 to 50,No,75,N/A,little_info,reachable,200
+Ukraine,skillreveal.io,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+France,datafit-solutions.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+United States,futurewiseresearch.com,Professional Services,20 to 50,No,95,N/A,much_info,reachable,200
+Viet Nam,forintech.com,Manufacturing and Industrial,50 to 100,No,95,N/A,much_info,reachable,200
+India,bioquestglobal.com,Healthcare,50 to 100,No,95,N/A,much_info,reachable,200
+United Kingdom,aristx.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+United States,saverin.com,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+Pakistan,amurglobal.com,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+India,ananyapanda.space,Other,solo,No,50,Personal Portfolio/Creative,unreachable,unreachable,SSL Error
+India,tryzensolution.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+India,sgnow.in,Professional Services,1 to 5,No,20,N/A,unreachable,unreachable,Connection Error
+India,edbrig.com,Technology and Software Development,1 to 5,No,70,N/A,unreachable,unreachable,SSL Error
+India,technagy.com,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+India,rotchsolutions.xyz,Technology and Software Development,1 to 5,No,60,N/A,little_info,reachable,200
+India,ghareebobazar.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+India,sghrfze.com,Other,solo,No,10,Placeholder/Test Domain,unreachable,reachable,200
+India,neubergtechnology.com,Technology and Software Development,50 to 100,No,45,N/A,unreachable,unreachable,Connection Error
+Georgia,luxgeorgia.com,Other,solo,No,95,Adult Services / Escorts,much_info,reachable,200
+Canada,bryanphama.com,Professional Services,solo,No,50,N/A,unreachable,unreachable,Connection Error
+India,resumetiger.app,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+India,shieldbyteinfosec.com,Technology and Software Development,200 to 500,No,95,N/A,much_info,reachable,200
+India,mudshare.com,Marketing and Advertising,50 to 100,No,95,N/A,much_info,reachable,200
+Portugal,sedgwick.net.au,Professional Services,500+,No,95,Insurance Adjusting and Claims Management,much_info,reachable,200
+United States,moasm.com,Technology and Software Development,1 to 5,No,50,N/A,unreachable,unreachable,Connection Error
+United States,rommelvargas.com,Technology and Software Development,solo,No,95,N/A,no_info,reachable,200
+India,iscuela.com,Education and e-learning,50 to 100,No,95,N/A,much_info,reachable,200
+Nepal,zomome.com,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+Viet Nam,flipjungle.com,E-commerce and Retail,1 to 5,No,50,N/A,unreachable,unreachable,Connection Error
+India,equinoxedge.com,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+United States,claimclimbers.com,Professional Services,1 to 5,No,50,N/A,unreachable,unreachable,418
+Australia,overdriverecruitment.com,Professional Services,5 to 20,No,95,Recruitment,much_info,reachable,200
+Slovakia,lembrt.com,Technology and Software Development,solo,No,50,N/A,no_info,reachable,200
+India,dotcouncil.org,Logistics and Transportation,5 to 20,No,95,N/A,much_info,reachable,200
+Australia,cribcreative.com.au,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+United States,julakanti.com,Other,solo,No,95,Personal Blog/Portfolio,much_info,reachable,200
+Australia,qcsmelbourne.com,Professional Services,1 to 5,No,95,Cleaning Services,much_info,reachable,200
+India,primetrace.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+India,bhullarenterprisesllc.com,E-commerce and Retail,5 to 20,No,95,N/A,much_info,reachable,200
+India,egetechs.com,Logistics and Transportation,1 to 5,No,95,N/A,much_info,reachable,200
+United States,cetta.io,Technology and Software Development,1 to 5,No,60,N/A,little_info,reachable,200
+United States,pbell.com,Professional Services,1 to 5,No,70,N/A,unreachable,unreachable,Timeout
+United States,ledusatx.com,E-commerce and Retail,5 to 20,No,95,N/A,much_info,reachable,200
+India,zymaxpharma.com,Professional Services,5 to 20,No,95,Pharmaceutical Consulting,much_info,reachable,200
+United Kingdom,choco.la,Technology and Software Development,20 to 50,Yes,60,N/A,little_info,reachable,200
+Germany,radiantscience.io,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+Canada,mavitdigital.com,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+India,targetgrid.ai,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+United States,carconnectautosales.com,E-commerce and Retail,5 to 20,No,70,N/A,unreachable,unreachable,Connection Error
+United States,maryruthorganics.com,E-commerce and Retail,50 to 100,No,95,N/A,much_info,reachable,200
+Hong Kong,kennedyslaw.com,Professional Services,500+,No,100,Legal Services,much_info,reachable,200
+Philippines,mail2tor.com,Technology and Software Development,solo,Yes,95,N/A,unreachable,unreachable,Connection Error
+Guernsey,boosttown.uk,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+India,kloudeva.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+Singapore,rv-quantum.com,Technology and Software Development,1 to 5,No,50,N/A,unreachable,unreachable,Connection Error
+Viet Nam,leanbase.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+India,pristineposh.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+Brazil,aeroamericagroup.com,Logistics and Transportation,5 to 20,No,95,N/A,much_info,reachable,200
+United States,grandvalleytutor.com,Education and e-learning,solo,No,70,N/A,little_info,reachable,200
+Germany,heinrichackermann-bau.de,Professional Services,50 to 100,No,95,N/A,much_info,reachable,200
+India,attoinfotech.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+India,fxpro.com,Financial Service,500+,No,95,N/A,unreachable,unreachable,403
+United States,pamhq.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+Germany,twentyeight.media,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+United States,metrowestcarservice.com,Logistics and Transportation,5 to 20,No,95,N/A,much_info,reachable,200
+United States,mailfence.com,Technology and Software Development,20 to 50,Yes,95,N/A,much_info,reachable,200
+United States,ttg-globalgroup.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+Canada,animahealth.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+United States,ferlazzo.it,Other,solo,No,70,Domain Registrar/Hosting Service,no_info,reachable,200
+United Kingdom,hellomoe.co.uk,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+United Arab Emirates,arctech.pro,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+India,xenelsoft.com,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+Australia,childsafealliance.com.au,Other,1 to 5,No,50,Child Protection / Non-profit,unreachable,unreachable,Connection Error
+United Kingdom,suntopfundau.com,Financial Service,1 to 5,No,50,N/A,unreachable,unreachable,Connection Error
+United States,newmoneycompany.com,Financial Service,20 to 50,No,95,N/A,much_info,reachable,200
+India,kylas.io,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+United States,succeedsmarter.co,Professional Services,1 to 5,No,95,N/A,much_info,reachable,200
+Belgium,avkwinkel.nl,E-commerce and Retail,1 to 5,No,40,N/A,unreachable,unreachable,Connection Error
+United Arab Emirates,3layerstech.com,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+Spain,groa.online,Other,solo,No,95,Personal Development and Empowerment,much_info,reachable,200
+Philippines,aidus.ai,Professional Services,1 to 5,No,95,N/A,much_info,reachable,200
+United States,skyvisionnyc.com,Professional Services,1 to 5,No,95,N/A,much_info,reachable,200
+India,zulutrade.com,Financial Service,100 to 200,No,95,N/A,much_info,reachable,200
+Singapore,upvuecpa.com,Professional Services,5 to 20,No,95,Accounting and Bookkeeping,much_info,reachable,200
+United States,uprealltyllc.com,Professional Services,1 to 5,No,50,N/A,unreachable,unreachable,Connection Error
+United Kingdom,leabro.com,Technology and Software Development,1 to 5,No,40,N/A,unreachable,unreachable,Connection Error
+India,fpstechnologies.in,Technology and Software Development,20 to 50,No,75,N/A,little_info,reachable,200
+India,couponorg.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+United States,int.pl,Technology and Software Development,20 to 50,Yes,75,N/A,little_info,reachable,200
+New Zealand,beyondarchitects.co.nz,Real Estate and Property Management,1 to 5,No,95,N/A,much_info,reachable,200
+India,theoffshorewave.com,Professional Services,100 to 200,No,95,N/A,much_info,reachable,200
+United States,classatruckin.com,Logistics and Transportation,1 to 5,No,50,N/A,unreachable,unreachable,404
+India,fameninja.com,Marketing and Advertising,1 to 5,No,95,N/A,much_info,reachable,200
+Thailand,fando.ai,Technology and Software Development,1 to 5,No,60,N/A,no_info,reachable,200
+United States,vluwork.com,Professional Services,20 to 50,No,95,N/A,much_info,reachable,200
+Philippines,lpb.gg,Technology and Software Development,1 to 5,No,70,N/A,unreachable,unreachable,Timeout
+Sri Lanka,affordabledreams.us,Other,solo,No,95,Real Estate,unreachable,unreachable,403
+United States,myclkd.id,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+Philippines,civilconsol.com.au,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+Australia,divegen.com.au,Education and e-learning,1 to 5,No,95,N/A,much_info,reachable,200
+United States,massavana.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+United Kingdom,collective-commerce-hk.com,Other,5 to 20,No,100,Domain Registrar Placeholder,no_info,reachable,200
+Australia,craftybusiness.cloud,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+India,coretechplacements.in,Professional Services,5 to 20,No,95,N/A,much_info,reachable,200
+United Kingdom,ccotech.net,Technology and Software Development,1 to 5,No,75,N/A,unreachable,unreachable,Timeout
+Thailand,edalem.io,Technology and Software Development,5 to 20,No,95,N/A,much_info,reachable,200
+India,hakunamatatatech.com,Technology and Software Development,200 to 500,No,95,N/A,much_info,reachable,200
+United Kingdom,wisewaysinstitute.com,Education and e-learning,5 to 20,No,95,N/A,much_info,reachable,200
+Israel,localbird.io,Professional Services,5 to 20,No,95,Concierge and Hospitality Services,much_info,reachable,200
+India,gtm.inc,Marketing and Advertising,50 to 100,No,95,N/A,much_info,reachable,200
+United States,newt.foundation,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+Netherlands,gorvat.me,Technology and Software Development,solo,No,50,N/A,unreachable,unreachable,Connection Error
+Ukraine,netsolidinvest.com,Financial Service,50 to 100,No,95,N/A,much_info,reachable,200
+Pakistan,weldo.org,Other,50 to 100,No,95,Non-profit,much_info,reachable,200
+Indonesia,aboniemediagroup.com,Marketing and Advertising,1 to 5,No,70,N/A,little_info,reachable,200
+Philippines,aqwire.co,Financial Service,50 to 100,No,95,N/A,much_info,reachable,200
+Russian Federation,vk.com,Technology and Software Development,500+,No,100,N/A,much_info,reachable,200
+India,tech-computers.com,E-commerce and Retail,5 to 20,No,40,N/A,unreachable,unreachable,Connection Error
+United States,area9tea8.com,Other,solo,No,0,N/A,unreachable,unreachable,Connection Error
+India,nextgenhardwarelimited.com,E-commerce and Retail,20 to 50,No,95,N/A,much_info,reachable,200
+Belgium,digitalbry.com,Marketing and Advertising,solo,No,95,N/A,much_info,reachable,200
+Indonesia,voip.associates,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+India,24x7designs.com,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+Australia,luxecosmetictattooing.com.au,Healthcare,solo,No,95,N/A,much_info,reachable,200
+United Kingdom,rbphotography.online,Professional Services,solo,No,40,Photography,unreachable,unreachable,Connection Error
+India,epictranscription.com,Professional Services,50 to 100,No,95,Transcription Services,much_info,reachable,200
+United States,bearcateth.com,Technology and Software Development,solo,No,95,N/A,no_info,reachable,200
+India,looplynks.com,Technology and Software Development,1 to 5,No,50,N/A,unreachable,unreachable,403
+Australia,xero.com,Technology and Software Development,500+,No,95,N/A,much_info,reachable,200
+Nigeria,rackantech.com,Financial Service,5 to 20,No,95,N/A,much_info,reachable,200
+United States,eylulozturk.com,Marketing and Advertising,solo,No,95,N/A,much_info,reachable,200
+Australia,futurasydney.com,Manufacturing and Industrial,5 to 20,No,95,N/A,much_info,reachable,200
+India,vstartimmigrations.in,Professional Services,5 to 20,No,95,Immigration Services,much_info,reachable,200
+United States,luminexagroup.com,Marketing and Advertising,20 to 50,No,95,N/A,much_info,reachable,200
+United States,tuta.com,Technology and Software Development,50 to 100,Yes,100,N/A,much_info,reachable,200
+Philippines,ph.staffoutsourcing.com,Professional Services,50 to 100,No,75,N/A,little_info,reachable,200
+Japan,deiso.co.jp,Professional Services,5 to 20,No,95,Environmental Consulting and Training,much_info,reachable,200
+United Kingdom,fansbase.uk,Technology and Software Development,1 to 5,No,70,N/A,unreachable,unreachable,Connection Error
+United States,petrovdigital.io,Technology and Software Development,1 to 5,No,95,N/A,much_info,reachable,200
+United States,doubt.com,Technology and Software Development,1 to 5,No,65,N/A,little_info,reachable,200
+Australia,firepulseai.com,Technology and Software Development,1 to 5,No,60,N/A,little_info,reachable,200
+United States,wilmingtonaquaticclub.com,Other,1 to 5,No,75,Sports Club/Recreation,unreachable,unreachable,Timeout
+Israel,toolswiss.com,E-commerce and Retail,5 to 20,No,95,N/A,much_info,reachable,200
+United States,4sqinternational.com,Professional Services,50 to 100,No,70,N/A,unreachable,unreachable,Connection Error
+Netherlands,risottini.com,E-commerce and Retail,1 to 5,No,95,N/A,much_info,reachable,200
+India,hetcash.com,Financial Service,1 to 5,No,75,N/A,unreachable,unreachable,SSL Error
+Hong Kong,hollo.hk,Healthcare,5 to 20,No,95,N/A,much_info,reachable,200
+United States,emergemarket.com,Logistics and Transportation,50 to 100,No,95,N/A,much_info,reachable,200
+India,functionatics.com,Marketing and Advertising,20 to 50,No,95,N/A,much_info,reachable,200
+United States,iv.ai,Technology and Software Development,50 to 100,No,95,N/A,much_info,reachable,200
+India,nakad.co,Financial Service,5 to 20,No,95,N/A,much_info,reachable,200
+India,vlifesolutions.co.uk,Marketing and Advertising,5 to 20,No,95,N/A,much_info,reachable,200
+India,agentic.it,Technology and Software Development,20 to 50,No,95,N/A,much_info,reachable,200
+United States,ge-ed.co,Logistics and Transportation,5 to 20,No,95,N/A,much_info,reachable,200
+United States,smartnutritionfitclub.com,Healthcare,solo,No,95,N/A,much_info,reachable,200
+Turkey,betrobot.ai,Technology and Software Development,1 to 5,No,75,N/A,unreachable,unreachable,Timeout
+India,justtrademarkets.com,Financial Service,20 to 50,No,95,N/A,much_info,reachable,200

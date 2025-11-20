@@ -1,0 +1,11 @@
+domain,category,company_size,email_provider,confidence,other_industry_category,website,website_status,website_reason
+onebusiness.com,Other,Unknown,No,35,Unidentified business,no_info,reachable,200
+passmail.net,Technology and Software Development,500+,No,95,nan,much_info,reachable,200
+stayhome.li,Technology and Software Development,Unknown,Yes,95,nan,little_info,reachable,200
+localhost.international,Technology and Software Development,Unknown,No,75,nan,little_info,reachable,200
+julakanti.com,Other,Unknown,No,10,Miscellaneous,no_info,reachable,200
+malobicky.com,Other,Unknown,No,25,Unused Domain,unreachable,unreachable,Exceeded 30 redirects.
+onebusiness.com,Other,Unknown,No,95,Domain Holding/Parking,no_info,reachable,200
+julakanti.com,E-commerce and Retail,20 to 50,No,95,N/A,no_info,reachable,200
+malobicky.com,,,,,,,,
+onebusiness.com,,,,,,,,
